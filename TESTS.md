@@ -25,3 +25,13 @@ This file covers the core audit engine logic. It ensures that the financial reco
 1. Ensure dependencies are installed: `npm install`
 2. Run the test suite: `npm test`
 (This runs `vitest run` under the hood).
+
+### Edge Case Coverage
+
+Beyond basic logic, I specifically tested for these edge cases:
+- **Zero Spend/Seats:** Ensuring the engine doesn't crash or suggest savings if the user inputs $0.
+- **Plan Mismatch:** Handling cases where a user selects a plan that doesn't exist in our hardcoded pricing data (graceful fallback to "Keep current setup").
+- **API Retail vs Business:** Verifying that the logic correctly distinguishes between a single user on an API tier versus a company requiring 50+ seats.
+
+### Future Testing Goals
+With more time, I would implement **E2E (End-to-End) tests** using Playwright to verify that the form persistence (localStorage) works across browser restarts and that the shareable URLs resolve correctly in a headless browser environment.
