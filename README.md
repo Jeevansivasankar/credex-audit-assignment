@@ -20,8 +20,10 @@ npm install
 # ANTHROPIC_API_KEY=...
 
 npm run dev
-```
-
+``` 
+### Run Tests
+```bash
+npm run test
 ### Deploy
 You can easily deploy this application to Vercel:
 1. Push this repository to GitHub.
@@ -38,4 +40,4 @@ You can easily deploy this application to Vercel:
 5. **Local Storage vs Auth**: Decided not to force users to create an account, using `localStorage` instead to persist form state. This drastically reduces friction for the user, aligning with the requirement to capture email *only after* value is shown.
 
 ## Deployed URL
-*(Add your deployed Vercel/Netlify URL here)*
+https://credex-audit-assignment.vercel.app
